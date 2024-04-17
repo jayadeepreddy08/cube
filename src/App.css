@@ -1,4 +1,4 @@
-.App {
+/*.App {
   text-align: center;
 }
 
@@ -35,4 +35,21 @@
   to {
     transform: rotate(360deg);
   }
+}
+*/
+.intro{
+  text-align: center;
+}
+.mApp {
+  display: flex; /* Use flexbox to create a side-by-side layout */
+}
+
+.left-side {
+  flex: 2; /* Allow the left side to take up as much space as possible */
+  padding: 20px;
+}
+
+.right-side {
+  flex: 3; /* Allow the right side to take up twice the space of the left side */
+  padding: 20px;
 }

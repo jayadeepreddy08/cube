@@ -1,0 +1,37 @@
+/* CustomerDetails.css */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .photo-grid img {
+    width: 100%;
+    height: auto;
+  }
+
+  .selected-card {
+    background-color: #d2cfcf; /* Change the background color to indicate selection */
+  }
+
+  .customer-card {
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    cursor: pointer;
+    /* Increase width and height of the cards */
+    width: 300px;
+    height: 150px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for transform and box-shadow */
+  }
+  
+  .customer-card:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-5px); /* Apply a translateY transform on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a box-shadow on hover for a floating effect */
+  }
+  
+  
+  

@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import CustomerDetails from './CustomerDetails';
+import CustomerList from './CustomerList';
+import { customers } from './Data';
 
-function App() {
+const App = () => {
+  const [selectedCustomer, setSelectedCustomer] = useState(null);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className='intro'>Cube React Assignment</h1>
+      <h4 className='intro'>By: Nunepalli Jayadeep Reddy</h4>
+      <div className='mApp'>
+      <div className="left-side">
+      
+      <CustomerList customers={customers} setSelectedCustomer={setSelectedCustomer} selectedCustomerId={selectedCustomer ? selectedCustomer.id : null} />
+
+      </div>
+      <div className="right-side">
+        {selectedCustomer && <CustomerDetails customer={selectedCustomer} />}
+      </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
+
