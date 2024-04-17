@@ -9,7 +9,7 @@ const CustomerDetails = ({ customer }) => {
   useEffect(() => {
     const fetchPhotos = async () => {
       try {
-        const response = await axios.get(`https://api.unsplash.com/search/photos?query=face&page=${currentPage}&per_page=9&client_id=w9TE34LYaCrzRvAgNpBsfE7hv_OOhOywxHP0P1XhSdA&timestamp=${new Date().getTime()}`);
+        const response = await axios.get(`https://api.unsplash.com/search/photos?query=face&page=${currentPage}&per_page=9&client_id=nifty--2jrpBXlWkPRdetnnMXxXPNB6FRafpOY7FpVc&timestamp=${new Date().getTime()}`);
         if (response.data && Array.isArray(response.data.results)) {
           setPhotos(response.data.results.map(photo => photo.urls.small));
         } else {
